@@ -40,14 +40,15 @@ List<ImageModel>images =[];
        final imageData = images[index];
        return Card(
          margin: EdgeInsets.all(10.0),
-         elevation: 4.0,
+         elevation: 8.0,
+         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
          child: Column(
            children: <Widget>[
              ClipRRect(borderRadius:BorderRadius.only(
                topLeft: Radius.circular(8.0),
                topRight: Radius.circular(8.0),
              ),
-               child: Image.network(imageData.url),
+               child: Image.network(imageData.url,height: 180.0,width:440,fit:BoxFit.fill),
              ),
              Container(
                padding: EdgeInsets.only(bottom:10.0),
